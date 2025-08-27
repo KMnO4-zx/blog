@@ -120,7 +120,7 @@ sequenceDiagram
     Agent->>LLM: 发送提示
     LLM->>Agent: 返回思考+行动
     
-    alt 需要工具
+    if 需要工具
         Agent->>Tools: 调用指定工具
         Tools->>Agent: 返回执行结果
         Agent->>Agent: 更新历史记录
