@@ -54,30 +54,6 @@ Thought：已获得天气数据，可以回复用户
 Action：回复"北京今天25度，晴天"
 ```
 
-### OpenAI Swarm Agent 架构
-
-OpenAI Swarm 是一个轻量级的多 Agent 编排框架，核心特点：
-
-**核心组件**：
-- **Agent**：具有指令和功能的独立单元
-- **Handoffs**：Agent 之间转移对话控制权
-- **Context Variables**：Agent 间共享的上下文数据
-
-**Swarm 架构特点**：
-- 高度可控（比 LangGraph 更轻量）
-- 易于测试和迭代
-- 支持 Agent 间的无缝切换
-- 教育用途友好
-
-**Swarm Agent 定义**：
-```python
-agent = Agent(
-    name="Weather Agent",
-    instructions="你是一个天气助手，使用工具获取天气信息",
-    functions=[get_weather, convert_temperature]
-)
-```
-
 ### 其他主流 Agent 架构
 
 **LangChain Agent**：
@@ -92,6 +68,18 @@ agent = Agent(
 - 自我提示生成
 - 适合开放式任务
 
+**MetaGPT**:
+- 软件开发的 Multi-Agent 协作框架
+- 模拟真实软件团队角色分工
+- 产品经理、架构师、工程师等角色扮演
+- 适合自动化软件开发任务
+
+**CAMELAI**:
+- 基于角色扮演的对话式 Agent 框架
+- 多 Agent 协作完成复杂任务
+- 强调角色定义和通信协议
+- 适合创意写作、教育培训等场景
+
 **架构对比**：
 
 | 架构 | 复杂度 | 控制力 | 适用场景 |
@@ -100,6 +88,8 @@ agent = Agent(
 | Swarm | 中 | 高 | 多 Agent 协作 |
 | LangChain | 高 | 中 | 复杂工作流 |
 | AutoGPT | 高 | 低 | 自主探索任务 |
+| MetaGPT | 高 | 中 | 软件开发自动化 |
+| CAMELAI | 中 | 高 | 角色扮演对话任务 |
 
 
 ## 第二部分：从零实现最简 Agent
