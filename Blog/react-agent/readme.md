@@ -101,40 +101,6 @@ agent = Agent(
 | LangChain | 高 | 中 | 复杂工作流 |
 | AutoGPT | 高 | 低 | 自主探索任务 |
 
-```mermaid
-graph LR
-    subgraph "ReAct 架构"
-        A1[感知] --> A2[思考]
-        A2 --> A3[行动]
-        A3 --> A4[观察]
-        A4 --> A2
-    end
-    
-    subgraph "Swarm 架构"
-        B1[Agent A] -->|handoff| B2[Agent B]
-        B2 -->|handoff| B3[Agent C]
-    end
-    
-    subgraph "LangChain 架构"
-        C1[提示模板] --> C2[LLM]
-        C2 --> C3[输出解析器]
-        C3 --> C4[工具链]
-    end
-    
-    style A1 fill:#e3f2fd
-    style A2 fill:#fff3e0
-    style A3 fill:#f3e5f5
-    style A4 fill:#e8f5e9
-    
-    style B1 fill:#fce4ec
-    style B2 fill:#e8f5e9
-    style B3 fill:#fff3e0
-    
-    style C1 fill:#e8eaf6
-    style C2 fill:#fff8e1
-    style C3 fill:#e0f2f1
-    style C4 fill:#fce4ec
-```
 
 ## 第二部分：从零实现最简 Agent
 
