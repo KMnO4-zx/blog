@@ -1,0 +1,4 @@
+# 异步编程教程依赖
+aiohttp>=3.8.0
+requests>=2.25.0
+asyncio-throttle>=1.0.0
