@@ -3,13 +3,13 @@ import re
 import time
 
 from llm import Siliconflow
-from tool import Tools
+from tool import ReactTools
 
 
 class ReactAgent:
     def __init__(self, api_key: str = '') -> None:
         self.api_key = api_key
-        self.tools = Tools()
+        self.tools = ReactTools()
         self.model = Siliconflow(api_key=self.api_key)
         self.system_prompt = self._build_system_prompt()
         
